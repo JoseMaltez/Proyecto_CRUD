@@ -1,5 +1,5 @@
 #pragma once
-
+#include "MenuCRUD.h";
 namespace CppCLRWinFormsProject {
 
 	using namespace System;
@@ -153,7 +153,10 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		if (dataReader->Read())
 		{
 			MessageBox::Show(L"Bienvenido " + txt_nombre->Text);
-
+			Proyecto_CRUD::MenuCRUD^ menucrud = gcnew Proyecto_CRUD::MenuCRUD();
+			this->Visible = false;
+			menucrud->ShowDialog();
+			this->Visible = true;
 		}
 		else
 		{
