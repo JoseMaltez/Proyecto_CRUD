@@ -8,7 +8,7 @@ namespace CppCLRWinFormsProject {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	using namespace MySql::Data::MySqlClient;
+	using namespace MySql::Data::MySqlClient; 
 
 	/// <summary>
 	/// Summary for Form1
@@ -165,7 +165,6 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	}
 	catch(Exception^x){ //capturamos cualquier error y lo mostramos como mensaje
 		MessageBox::Show(x->Message);
-
 	}
 
 }
