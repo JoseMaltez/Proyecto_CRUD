@@ -37,9 +37,11 @@ namespace Proyecto_CRUD {
 		}
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::TabControl^ tabControl1;
-
-
 	private: System::Windows::Forms::TabPage^ tabPage2;
+
+
+
+
 
 	private: System::Windows::Forms::TabPage^ tabPage3;
 	private: System::Windows::Forms::TabPage^ tabPage4;
@@ -62,18 +64,27 @@ namespace Proyecto_CRUD {
 	private: System::Windows::Forms::DataGridView^ data_grid;
 	private: DB^ data; //creamos objeto que se llama data de DB
 	private: System::Windows::Forms::DataGridView^ data_grid2;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::TextBox^ txt_placa_mod;
+
+	private: System::Windows::Forms::TextBox^ txt_anio_mod;
+
+	private: System::Windows::Forms::TextBox^ txt_serie_mod;
+
+	private: System::Windows::Forms::TextBox^ txt_marca_mod;
+
+	private: System::Windows::Forms::TextBox^ txt_nombre_mod;
+	private: System::Windows::Forms::Button^ btn_modificar;
+
+
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Label^ label8;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::DataGridView^ data_grid3;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::TextBox^ txt_id_mod;
+
 
 
 
@@ -94,12 +105,12 @@ namespace Proyecto_CRUD {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle11 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle12 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
@@ -116,17 +127,19 @@ namespace Proyecto_CRUD {
 			this->txt_marca = (gcnew System::Windows::Forms::TextBox());
 			this->txt_nombre = (gcnew System::Windows::Forms::TextBox());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->txt_id_mod = (gcnew System::Windows::Forms::TextBox());
+			this->btn_modificar = (gcnew System::Windows::Forms::Button());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->txt_placa_mod = (gcnew System::Windows::Forms::TextBox());
+			this->txt_anio_mod = (gcnew System::Windows::Forms::TextBox());
+			this->txt_serie_mod = (gcnew System::Windows::Forms::TextBox());
+			this->txt_marca_mod = (gcnew System::Windows::Forms::TextBox());
+			this->txt_nombre_mod = (gcnew System::Windows::Forms::TextBox());
 			this->data_grid2 = (gcnew System::Windows::Forms::DataGridView());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->data_grid3 = (gcnew System::Windows::Forms::DataGridView());
@@ -192,25 +205,25 @@ namespace Proyecto_CRUD {
 			// 
 			this->data_grid->BackgroundColor = System::Drawing::Color::SteelBlue;
 			this->data_grid->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle1->BackColor = System::Drawing::Color::Teal;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle9->BackColor = System::Drawing::Color::Teal;
+			dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::Color::Teal;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->data_grid->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle9->SelectionBackColor = System::Drawing::Color::Teal;
+			dataGridViewCellStyle9->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->data_grid->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
 			this->data_grid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::Color::MidnightBlue;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle10->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle10->BackColor = System::Drawing::Color::MidnightBlue;
+			dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::Color::DeepSkyBlue;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::Desktop;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->data_grid->DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle10->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle10->SelectionBackColor = System::Drawing::Color::DeepSkyBlue;
+			dataGridViewCellStyle10->SelectionForeColor = System::Drawing::SystemColors::Desktop;
+			dataGridViewCellStyle10->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->data_grid->DefaultCellStyle = dataGridViewCellStyle10;
 			this->data_grid->Location = System::Drawing::Point(31, 29);
 			this->data_grid->Name = L"data_grid";
 			this->data_grid->ReadOnly = true;
@@ -314,17 +327,19 @@ namespace Proyecto_CRUD {
 			// tabPage2
 			// 
 			this->tabPage2->BackColor = System::Drawing::Color::SteelBlue;
-			this->tabPage2->Controls->Add(this->button1);
+			this->tabPage2->Controls->Add(this->label12);
+			this->tabPage2->Controls->Add(this->txt_id_mod);
+			this->tabPage2->Controls->Add(this->btn_modificar);
 			this->tabPage2->Controls->Add(this->label11);
 			this->tabPage2->Controls->Add(this->label10);
 			this->tabPage2->Controls->Add(this->label9);
 			this->tabPage2->Controls->Add(this->label8);
 			this->tabPage2->Controls->Add(this->label7);
-			this->tabPage2->Controls->Add(this->textBox5);
-			this->tabPage2->Controls->Add(this->textBox4);
-			this->tabPage2->Controls->Add(this->textBox3);
-			this->tabPage2->Controls->Add(this->textBox2);
-			this->tabPage2->Controls->Add(this->textBox1);
+			this->tabPage2->Controls->Add(this->txt_placa_mod);
+			this->tabPage2->Controls->Add(this->txt_anio_mod);
+			this->tabPage2->Controls->Add(this->txt_serie_mod);
+			this->tabPage2->Controls->Add(this->txt_marca_mod);
+			this->tabPage2->Controls->Add(this->txt_nombre_mod);
 			this->tabPage2->Controls->Add(this->data_grid2);
 			this->tabPage2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -335,19 +350,38 @@ namespace Proyecto_CRUD {
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Modificar";
 			// 
-			// button1
+			// label12
 			// 
-			this->button1->Location = System::Drawing::Point(748, 384);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(189, 39);
-			this->button1->TabIndex = 11;
-			this->button1->Text = L"Modificar";
-			this->button1->UseVisualStyleBackColor = true;
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(730, 29);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(23, 20);
+			this->label12->TabIndex = 13;
+			this->label12->Text = L"Id";
+			// 
+			// txt_id_mod
+			// 
+			this->txt_id_mod->Enabled = false;
+			this->txt_id_mod->Location = System::Drawing::Point(734, 52);
+			this->txt_id_mod->Name = L"txt_id_mod";
+			this->txt_id_mod->Size = System::Drawing::Size(234, 26);
+			this->txt_id_mod->TabIndex = 12;
+			this->txt_id_mod->TextChanged += gcnew System::EventHandler(this, &MenuCRUD::textBox1_TextChanged);
+			// 
+			// btn_modificar
+			// 
+			this->btn_modificar->Location = System::Drawing::Point(749, 426);
+			this->btn_modificar->Name = L"btn_modificar";
+			this->btn_modificar->Size = System::Drawing::Size(189, 39);
+			this->btn_modificar->TabIndex = 11;
+			this->btn_modificar->Text = L"Modificar";
+			this->btn_modificar->UseVisualStyleBackColor = true;
+			this->btn_modificar->Click += gcnew System::EventHandler(this, &MenuCRUD::btn_modificar_Click);
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(729, 300);
+			this->label11->Location = System::Drawing::Point(730, 342);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(48, 20);
 			this->label11->TabIndex = 10;
@@ -356,7 +390,7 @@ namespace Proyecto_CRUD {
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(729, 237);
+			this->label10->Location = System::Drawing::Point(730, 279);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(38, 20);
 			this->label10->TabIndex = 9;
@@ -365,7 +399,7 @@ namespace Proyecto_CRUD {
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(729, 172);
+			this->label9->Location = System::Drawing::Point(730, 214);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(46, 20);
 			this->label9->TabIndex = 8;
@@ -374,7 +408,7 @@ namespace Proyecto_CRUD {
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(729, 108);
+			this->label8->Location = System::Drawing::Point(730, 150);
 			this->label8->Name = L"label8";
 			this->label8->Size = System::Drawing::Size(53, 20);
 			this->label8->TabIndex = 7;
@@ -383,71 +417,71 @@ namespace Proyecto_CRUD {
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(729, 48);
+			this->label7->Location = System::Drawing::Point(730, 90);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(65, 20);
 			this->label7->TabIndex = 6;
 			this->label7->Text = L"Nombre";
 			// 
-			// textBox5
+			// txt_placa_mod
 			// 
-			this->textBox5->Location = System::Drawing::Point(733, 323);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(234, 26);
-			this->textBox5->TabIndex = 5;
+			this->txt_placa_mod->Location = System::Drawing::Point(734, 365);
+			this->txt_placa_mod->Name = L"txt_placa_mod";
+			this->txt_placa_mod->Size = System::Drawing::Size(234, 26);
+			this->txt_placa_mod->TabIndex = 5;
 			// 
-			// textBox4
+			// txt_anio_mod
 			// 
-			this->textBox4->Location = System::Drawing::Point(733, 260);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(234, 26);
-			this->textBox4->TabIndex = 4;
+			this->txt_anio_mod->Location = System::Drawing::Point(734, 302);
+			this->txt_anio_mod->Name = L"txt_anio_mod";
+			this->txt_anio_mod->Size = System::Drawing::Size(234, 26);
+			this->txt_anio_mod->TabIndex = 4;
 			// 
-			// textBox3
+			// txt_serie_mod
 			// 
-			this->textBox3->Location = System::Drawing::Point(733, 195);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(234, 26);
-			this->textBox3->TabIndex = 3;
-			this->textBox3->TextChanged += gcnew System::EventHandler(this, &MenuCRUD::textBox3_TextChanged_1);
+			this->txt_serie_mod->Location = System::Drawing::Point(734, 237);
+			this->txt_serie_mod->Name = L"txt_serie_mod";
+			this->txt_serie_mod->Size = System::Drawing::Size(234, 26);
+			this->txt_serie_mod->TabIndex = 3;
+			this->txt_serie_mod->TextChanged += gcnew System::EventHandler(this, &MenuCRUD::textBox3_TextChanged_1);
 			// 
-			// textBox2
+			// txt_marca_mod
 			// 
-			this->textBox2->Location = System::Drawing::Point(733, 131);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(234, 26);
-			this->textBox2->TabIndex = 2;
+			this->txt_marca_mod->Location = System::Drawing::Point(734, 173);
+			this->txt_marca_mod->Name = L"txt_marca_mod";
+			this->txt_marca_mod->Size = System::Drawing::Size(234, 26);
+			this->txt_marca_mod->TabIndex = 2;
 			// 
-			// textBox1
+			// txt_nombre_mod
 			// 
-			this->textBox1->Location = System::Drawing::Point(733, 71);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(234, 26);
-			this->textBox1->TabIndex = 1;
+			this->txt_nombre_mod->Location = System::Drawing::Point(734, 113);
+			this->txt_nombre_mod->Name = L"txt_nombre_mod";
+			this->txt_nombre_mod->Size = System::Drawing::Size(234, 26);
+			this->txt_nombre_mod->TabIndex = 1;
 			// 
 			// data_grid2
 			// 
 			this->data_grid2->BackgroundColor = System::Drawing::Color::SteelBlue;
 			this->data_grid2->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->data_grid2->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle7->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->data_grid2->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
 			this->data_grid2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle4->BackColor = System::Drawing::Color::MidnightBlue;
-			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle8->BackColor = System::Drawing::Color::MidnightBlue;
+			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle4->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::Color::DeepSkyBlue;
-			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::Desktop;
-			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->data_grid2->DefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle8->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle8->SelectionBackColor = System::Drawing::Color::DeepSkyBlue;
+			dataGridViewCellStyle8->SelectionForeColor = System::Drawing::SystemColors::Desktop;
+			dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->data_grid2->DefaultCellStyle = dataGridViewCellStyle8;
 			this->data_grid2->Location = System::Drawing::Point(31, 29);
 			this->data_grid2->Name = L"data_grid2";
 			this->data_grid2->ReadOnly = true;
@@ -473,25 +507,25 @@ namespace Proyecto_CRUD {
 			// 
 			this->data_grid3->BackgroundColor = System::Drawing::Color::SteelBlue;
 			this->data_grid3->BorderStyle = System::Windows::Forms::BorderStyle::None;
-			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle11->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle11->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->data_grid3->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle11->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle11->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle11->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle11->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->data_grid3->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
 			this->data_grid3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle6->BackColor = System::Drawing::Color::MidnightBlue;
-			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle12->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle12->BackColor = System::Drawing::Color::MidnightBlue;
+			dataGridViewCellStyle12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle6->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::Color::DeepSkyBlue;
-			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::Desktop;
-			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->data_grid3->DefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle12->ForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle12->SelectionBackColor = System::Drawing::Color::DeepSkyBlue;
+			dataGridViewCellStyle12->SelectionForeColor = System::Drawing::SystemColors::Desktop;
+			dataGridViewCellStyle12->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->data_grid3->DefaultCellStyle = dataGridViewCellStyle12;
 			this->data_grid3->Location = System::Drawing::Point(31, 29);
 			this->data_grid3->Name = L"data_grid3";
 			this->data_grid3->ReadOnly = true;
@@ -558,10 +592,40 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 
 
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	String^ id = Convert::ToString(data_grid2->SelectedRows[0]->Cells[0]->Value); //seleccionamos los valores de la fila completa
+	String^ nombre = Convert::ToString(data_grid2->SelectedRows[0]->Cells[1]->Value);
+	String^ marca = Convert::ToString(data_grid2->SelectedRows[0]->Cells[2]->Value);
+	String^ serie = Convert::ToString(data_grid2->SelectedRows[0]->Cells[3]->Value);
+	String^ anio = Convert::ToString(data_grid2->SelectedRows[0]->Cells[4]->Value);
+	String^ placa = Convert::ToString(data_grid2->SelectedRows[0]->Cells[5]->Value);
+	this->txt_id_mod->Text = id; //asignamos los valores de la fila a sus respectivas textbox
+	this->txt_nombre_mod->Text = nombre;
+	this->txt_marca_mod->Text = marca;
+	this->txt_serie_mod->Text = serie;
+	this->txt_anio_mod->Text = anio;
+	this->txt_placa_mod->Text = placa;
+	
 }
 private: System::Void data_grid_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
 private: System::Void textBox3_TextChanged_1(System::Object^ sender, System::EventArgs^ e) {
 }
+private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btn_modificar_Click(System::Object^ sender, System::EventArgs^ e) {
+	data->AbrirConexion();
+	data->Modificar(this->txt_nombre_mod->Text, this->txt_marca_mod->Text, this->txt_serie_mod->Text, this->txt_anio_mod->Text, this->txt_placa_mod->Text, this->txt_id_mod->Text); //llamamos a la funcion modificar y le indicamos de donde sacara los datos para la tabla
+	data->CerrarConexion();
+	this->Consulta();
+	this->txt_nombre_mod->Clear(); //se limpian los textbox 
+	this->txt_marca_mod->Clear();
+	this->txt_anio_mod->Clear();
+	this->txt_placa_mod->Clear();
+	this->txt_serie_mod->Clear();
+	this->txt_id_mod->Clear();
+	MessageBox::Show(L"Modificación realizada correctamente!");
+}
+
+
 };
 }

@@ -16,5 +16,6 @@ public:
 	void AbrirConexion();
 	void CerrarConexion();
 	void Insertar(String^, String^, String^, String^, String^); 
+	void Modificar(String^, String^, String^, String^, String^, String^);
 };
 

@@ -43,3 +43,23 @@ void DB::Insertar(String^ nombre, String^ marca, String^ serie, String^ anio_fab
 		MessageBox::Show(e->Message);
 	}
 }
+
+void DB::Modificar(String^ nombre, String^ marca, String^ serie, String^ anio_fabricacion, String^ placa, String^ ref) //metodo para modificar en la base de datos las variables privadas
+{
+	String^ sql = "update registro_de_ventas set Nombre = '" + nombre + "', Marca = '" + marca + "', Serie = '" + serie + "', Año = '" + anio_fabricacion + "', Placa = '" + placa + "' where Id = '" + ref + "'"; //indicamos que variables se modificaran respectivamente
+	MySqlCommand^ cursor = gcnew MySqlCommand(sql, this->conn); //hacemos el cursor
+	try
+	{
+		using namespace System::Windows::Forms;
+		using namespace System::Data;
+		using namespace System::Drawing;
+		cursor->ExecuteNonQuery();
+	}
+	catch (Exception^ e) //si hay un error se muestra un mensaje en pantalla
+	{
+		using namespace System::Windows::Forms;
+		using namespace System::Data;
+		using namespace System::Drawing;
+		MessageBox::Show(e->Message);
+	}
+}

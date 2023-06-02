@@ -44,6 +44,7 @@ namespace CppCLRWinFormsProject {
 
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::CheckBox^ mostrar_con;
 	protected:
 
 	private:
@@ -64,6 +65,7 @@ namespace CppCLRWinFormsProject {
 			this->txt_contra = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->mostrar_con = (gcnew System::Windows::Forms::CheckBox());
 			this->SuspendLayout();
 			// 
 			// button1
@@ -117,11 +119,23 @@ namespace CppCLRWinFormsProject {
 			this->label2->Text = L"Contraseña";
 			this->label2->Click += gcnew System::EventHandler(this, &Form1::label2_Click);
 			// 
+			// mostrar_con
+			// 
+			this->mostrar_con->AutoSize = true;
+			this->mostrar_con->Location = System::Drawing::Point(46, 164);
+			this->mostrar_con->Name = L"mostrar_con";
+			this->mostrar_con->Size = System::Drawing::Size(118, 17);
+			this->mostrar_con->TabIndex = 5;
+			this->mostrar_con->Text = L"Mostrar Contraseña";
+			this->mostrar_con->UseVisualStyleBackColor = true;
+			this->mostrar_con->CheckedChanged += gcnew System::EventHandler(this, &Form1::mostrar_con_CheckedChanged);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(284, 261);
+			this->Controls->Add(this->mostrar_con);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->txt_contra);
@@ -171,6 +185,16 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void mostrar_con_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (mostrar_con->Checked == true)//muestra la contraseña si esta marcado
+	{
+		this->txt_contra->UseSystemPasswordChar = true;
+	}
+	else if(mostrar_con->Checked == false)//oculta la contraseña si esta desmarcado
+	{
+		this->txt_contra->UseSystemPasswordChar = false;
+	}
 }
 };
 }
