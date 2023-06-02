@@ -8,7 +8,7 @@ namespace CppCLRWinFormsProject {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-	using namespace MySql::Data::MySqlClient; 
+	using namespace MySql::Data::MySqlClient;  //añadimos las librerias de mysql
 
 	/// <summary>
 	/// Summary for Form1
