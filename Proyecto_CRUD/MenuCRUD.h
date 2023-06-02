@@ -48,7 +48,8 @@ namespace Proyecto_CRUD {
 	private: System::Windows::Forms::TextBox^ txt_marca;
 
 	private: System::Windows::Forms::TextBox^ txt_nombre;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ btn_guardar;
+
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::TextBox^ txt_placa;
@@ -83,7 +84,7 @@ namespace Proyecto_CRUD {
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->data_grid = (gcnew System::Windows::Forms::DataGridView());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->btn_guardar = (gcnew System::Windows::Forms::Button());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->txt_placa = (gcnew System::Windows::Forms::TextBox());
@@ -131,7 +132,7 @@ namespace Proyecto_CRUD {
 			// 
 			this->tabPage4->BackColor = System::Drawing::Color::SteelBlue;
 			this->tabPage4->Controls->Add(this->data_grid);
-			this->tabPage4->Controls->Add(this->button1);
+			this->tabPage4->Controls->Add(this->btn_guardar);
 			this->tabPage4->Controls->Add(this->label6);
 			this->tabPage4->Controls->Add(this->label5);
 			this->tabPage4->Controls->Add(this->txt_placa);
@@ -153,17 +154,18 @@ namespace Proyecto_CRUD {
 			this->data_grid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->data_grid->Location = System::Drawing::Point(31, 29);
 			this->data_grid->Name = L"data_grid";
-			this->data_grid->Size = System::Drawing::Size(630, 423);
+			this->data_grid->Size = System::Drawing::Size(672, 423);
 			this->data_grid->TabIndex = 11;
 			// 
-			// button1
+			// btn_guardar
 			// 
-			this->button1->Location = System::Drawing::Point(758, 381);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(189, 39);
-			this->button1->TabIndex = 10;
-			this->button1->Text = L"Guardar";
-			this->button1->UseVisualStyleBackColor = true;
+			this->btn_guardar->Location = System::Drawing::Point(758, 381);
+			this->btn_guardar->Name = L"btn_guardar";
+			this->btn_guardar->Size = System::Drawing::Size(189, 39);
+			this->btn_guardar->TabIndex = 10;
+			this->btn_guardar->Text = L"Guardar";
+			this->btn_guardar->UseVisualStyleBackColor = true;
+			this->btn_guardar->Click += gcnew System::EventHandler(this, &MenuCRUD::button1_Click);
 			// 
 			// label6
 			// 
@@ -304,9 +306,17 @@ public: void Consulta() //metodo publico que mostrara los datos
 }
 
 
-
-
-
+private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->data->AbrirConexion(); //abrimos la conexión para llenar la tabla
+	this->data->Insertar(this->txt_nombre->Text, this->txt_marca->Text, this->txt_serie->Text, this->txt_anio->Text, this->txt_placa->Text); //llamamos a la funcion insertar y le indicamos de donde sacara los datos para la tabla
+	this->data->CerrarConexion(); //cerramos la conexion luego de llenar la tabla
+	this->Consulta();
+	this->txt_nombre->Clear();
+	this->txt_marca->Clear();
+	this->txt_anio->Clear();
+	this->txt_placa->Clear();
+	this->txt_serie->Clear();
+}
 
 
 

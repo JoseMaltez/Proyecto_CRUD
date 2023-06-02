@@ -26,3 +26,20 @@ DataTable^ DB::getData() //metodo para obtener la informacion
 	data->Fill(tabla); //hacemos que la tabla se llene con la informacion
 	return tabla; //retornamos la tabla
 }
+
+void DB::Insertar(String^ nombre, String^ marca, String^ serie, String^ anio_fabricacion, String^ placa) //metodo para insertar a la base de datos con las variables privadas
+{
+	String^ sql = "insert into registro_de_ventas(Nombre, Marca, Serie, Año, Placa) values ('" + nombre + "', '" + marca + "', '" + serie + "', '" + anio_fabricacion + "', '" + placa + "')"; //indicamos que variables iran en su respectiva casilla
+	MySqlCommand^ cursor = gcnew MySqlCommand(sql, this->conn); //hacemos el cursor
+	try
+	{
+		cursor->ExecuteNonQuery();
+	}
+	catch (Exception^ e) //si hay un error se muestra un mensaje en pantalla
+	{
+		using namespace System::Windows::Forms;
+		using namespace System::Data;
+		using namespace System::Drawing;
+		MessageBox::Show(e->Message);
+	}
+}

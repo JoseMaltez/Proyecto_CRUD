@@ -15,5 +15,6 @@ public:
 	DataTable^ getData(); //metodos
 	void AbrirConexion();
 	void CerrarConexion();
+	void Insertar(String^, String^, String^, String^, String^); 
 };
 
