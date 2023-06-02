@@ -45,6 +45,7 @@ namespace CppCLRWinFormsProject {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::CheckBox^ mostrar_con;
+	private: System::Windows::Forms::Label^ label3;
 	protected:
 
 	private:
@@ -66,21 +67,38 @@ namespace CppCLRWinFormsProject {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->mostrar_con = (gcnew System::Windows::Forms::CheckBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(79, 213);
+			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
+				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->button1->Location = System::Drawing::Point(154, 287);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(115, 36);
+			this->button1->Size = System::Drawing::Size(152, 35);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Login";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Text = L"Iniciar Sesión";
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
+			this->button1->MouseEnter += gcnew System::EventHandler(this, &Form1::button1_MouseEnter);
 			// 
 			// txt_nombre
 			// 
-			this->txt_nombre->Location = System::Drawing::Point(46, 42);
+			this->txt_nombre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(49)));
+			this->txt_nombre->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->txt_nombre->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txt_nombre->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
+				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_nombre->Location = System::Drawing::Point(137, 123);
 			this->txt_nombre->Multiline = true;
 			this->txt_nombre->Name = L"txt_nombre";
 			this->txt_nombre->Size = System::Drawing::Size(193, 38);
@@ -90,7 +108,14 @@ namespace CppCLRWinFormsProject {
 			// 
 			// txt_contra
 			// 
-			this->txt_contra->Location = System::Drawing::Point(46, 120);
+			this->txt_contra->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(49)));
+			this->txt_contra->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->txt_contra->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->txt_contra->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
+				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_contra->Location = System::Drawing::Point(137, 186);
 			this->txt_contra->Multiline = true;
 			this->txt_contra->Name = L"txt_contra";
 			this->txt_contra->PasswordChar = '*';
@@ -102,9 +127,12 @@ namespace CppCLRWinFormsProject {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(43, 26);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::White;
+			this->label1->Location = System::Drawing::Point(133, 101);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(43, 13);
+			this->label1->Size = System::Drawing::Size(65, 19);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Usuario";
 			this->label1->Click += gcnew System::EventHandler(this, &Form1::label1_Click);
@@ -112,9 +140,12 @@ namespace CppCLRWinFormsProject {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(43, 104);
+			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::White;
+			this->label2->Location = System::Drawing::Point(133, 164);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(61, 13);
+			this->label2->Size = System::Drawing::Size(98, 19);
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"Contraseña";
 			this->label2->Click += gcnew System::EventHandler(this, &Form1::label2_Click);
@@ -122,19 +153,38 @@ namespace CppCLRWinFormsProject {
 			// mostrar_con
 			// 
 			this->mostrar_con->AutoSize = true;
-			this->mostrar_con->Location = System::Drawing::Point(46, 164);
+			this->mostrar_con->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->mostrar_con->ForeColor = System::Drawing::Color::White;
+			this->mostrar_con->Location = System::Drawing::Point(137, 230);
 			this->mostrar_con->Name = L"mostrar_con";
-			this->mostrar_con->Size = System::Drawing::Size(118, 17);
+			this->mostrar_con->Size = System::Drawing::Size(154, 20);
 			this->mostrar_con->TabIndex = 5;
 			this->mostrar_con->Text = L"Mostrar Contraseña";
 			this->mostrar_con->UseVisualStyleBackColor = true;
 			this->mostrar_con->CheckedChanged += gcnew System::EventHandler(this, &Form1::mostrar_con_CheckedChanged);
 			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Century Schoolbook", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::White;
+			this->label3->Location = System::Drawing::Point(95, 9);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(288, 64);
+			this->label3->TabIndex = 6;
+			this->label3->Text = L"Inicio de sesión en \r\nBase de Datos";
+			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(284, 261);
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
+				static_cast<System::Int32>(static_cast<System::Byte>(49)));
+			this->ClientSize = System::Drawing::Size(459, 363);
+			this->Controls->Add(this->label3);
 			this->Controls->Add(this->mostrar_con);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
@@ -195,6 +245,8 @@ private: System::Void mostrar_con_CheckedChanged(System::Object^ sender, System:
 	{
 		this->txt_contra->UseSystemPasswordChar = false;
 	}
+}
+private: System::Void button1_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
