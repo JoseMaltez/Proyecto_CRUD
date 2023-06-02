@@ -10,7 +10,6 @@ namespace CppCLRWinFormsProject {
 	using namespace System::Drawing;
 	using namespace MySql::Data::MySqlClient;
 
-	// Aqui se crea la clase
 	/// <summary>
 	/// Summary for Form1
 	/// </summary>
