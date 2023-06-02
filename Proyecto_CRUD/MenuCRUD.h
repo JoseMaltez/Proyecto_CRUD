@@ -185,7 +185,7 @@ namespace Proyecto_CRUD {
 			this->tabControl1->Multiline = true;
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(1017, 521);
+			this->tabControl1->Size = System::Drawing::Size(1017, 537);
 			this->tabControl1->TabIndex = 5;
 			// 
 			// tabPage4
@@ -207,7 +207,7 @@ namespace Proyecto_CRUD {
 				static_cast<System::Byte>(0)));
 			this->tabPage4->Location = System::Drawing::Point(4, 36);
 			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Size = System::Drawing::Size(1009, 481);
+			this->tabPage4->Size = System::Drawing::Size(1009, 497);
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Agregar";
 			this->tabPage4->Click += gcnew System::EventHandler(this, &MenuCRUD::tabPage4_Click);
@@ -363,7 +363,7 @@ namespace Proyecto_CRUD {
 			this->tabPage2->Location = System::Drawing::Point(4, 36);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(1009, 481);
+			this->tabPage2->Size = System::Drawing::Size(1009, 497);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Modificar";
 			// 
@@ -388,7 +388,7 @@ namespace Proyecto_CRUD {
 			// btn_modificar
 			// 
 			this->btn_modificar->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->btn_modificar->Location = System::Drawing::Point(759, 419);
+			this->btn_modificar->Location = System::Drawing::Point(749, 426);
 			this->btn_modificar->Name = L"btn_modificar";
 			this->btn_modificar->Size = System::Drawing::Size(189, 39);
 			this->btn_modificar->TabIndex = 11;
@@ -521,7 +521,7 @@ namespace Proyecto_CRUD {
 				static_cast<System::Byte>(0)));
 			this->tabPage3->Location = System::Drawing::Point(4, 36);
 			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Size = System::Drawing::Size(1009, 481);
+			this->tabPage3->Size = System::Drawing::Size(1009, 497);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Borrar";
 			// 

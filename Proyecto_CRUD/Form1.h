@@ -80,14 +80,13 @@ namespace CppCLRWinFormsProject {
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
 				static_cast<System::Int32>(static_cast<System::Byte>(95)));
-			this->button1->Location = System::Drawing::Point(154, 287);
+			this->button1->Location = System::Drawing::Point(151, 313);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(152, 35);
+			this->button1->Size = System::Drawing::Size(160, 36);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Iniciar Sesión";
+			this->button1->Text = L"Inicar Sesión";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
-			this->button1->MouseEnter += gcnew System::EventHandler(this, &Form1::button1_MouseEnter);
 			// 
 			// txt_nombre
 			// 
@@ -98,7 +97,7 @@ namespace CppCLRWinFormsProject {
 				static_cast<System::Byte>(0)));
 			this->txt_nombre->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
 				static_cast<System::Int32>(static_cast<System::Byte>(95)));
-			this->txt_nombre->Location = System::Drawing::Point(137, 123);
+			this->txt_nombre->Location = System::Drawing::Point(140, 126);
 			this->txt_nombre->Multiline = true;
 			this->txt_nombre->Name = L"txt_nombre";
 			this->txt_nombre->Size = System::Drawing::Size(193, 38);
@@ -115,7 +114,7 @@ namespace CppCLRWinFormsProject {
 				static_cast<System::Byte>(0)));
 			this->txt_contra->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
 				static_cast<System::Int32>(static_cast<System::Byte>(95)));
-			this->txt_contra->Location = System::Drawing::Point(137, 186);
+			this->txt_contra->Location = System::Drawing::Point(140, 204);
 			this->txt_contra->Multiline = true;
 			this->txt_contra->Name = L"txt_contra";
 			this->txt_contra->PasswordChar = '*';
@@ -130,7 +129,7 @@ namespace CppCLRWinFormsProject {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::White;
-			this->label1->Location = System::Drawing::Point(133, 101);
+			this->label1->Location = System::Drawing::Point(136, 104);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(65, 19);
 			this->label1->TabIndex = 3;
@@ -143,7 +142,7 @@ namespace CppCLRWinFormsProject {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::White;
-			this->label2->Location = System::Drawing::Point(133, 164);
+			this->label2->Location = System::Drawing::Point(136, 182);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(98, 19);
 			this->label2->TabIndex = 4;
@@ -156,7 +155,7 @@ namespace CppCLRWinFormsProject {
 			this->mostrar_con->Font = (gcnew System::Drawing::Font(L"Century Gothic", 9.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->mostrar_con->ForeColor = System::Drawing::Color::White;
-			this->mostrar_con->Location = System::Drawing::Point(137, 230);
+			this->mostrar_con->Location = System::Drawing::Point(140, 248);
 			this->mostrar_con->Name = L"mostrar_con";
 			this->mostrar_con->Size = System::Drawing::Size(154, 20);
 			this->mostrar_con->TabIndex = 5;
@@ -170,11 +169,11 @@ namespace CppCLRWinFormsProject {
 			this->label3->Font = (gcnew System::Drawing::Font(L"Century Schoolbook", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label3->ForeColor = System::Drawing::Color::White;
-			this->label3->Location = System::Drawing::Point(95, 9);
+			this->label3->Location = System::Drawing::Point(108, 12);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(288, 64);
+			this->label3->Size = System::Drawing::Size(264, 64);
 			this->label3->TabIndex = 6;
-			this->label3->Text = L"Inicio de sesión en \r\nBase de Datos";
+			this->label3->Text = L"Iniciar Sesión en \r\nBase de datos";
 			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// Form1
@@ -183,7 +182,7 @@ namespace CppCLRWinFormsProject {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(35)),
 				static_cast<System::Int32>(static_cast<System::Byte>(49)));
-			this->ClientSize = System::Drawing::Size(459, 363);
+			this->ClientSize = System::Drawing::Size(467, 386);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->mostrar_con);
 			this->Controls->Add(this->label2);
@@ -245,8 +244,6 @@ private: System::Void mostrar_con_CheckedChanged(System::Object^ sender, System:
 	{
 		this->txt_contra->UseSystemPasswordChar = false;
 	}
-}
-private: System::Void button1_MouseEnter(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
