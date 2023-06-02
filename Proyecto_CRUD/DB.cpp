@@ -63,3 +63,27 @@ void DB::Modificar(String^ nombre, String^ marca, String^ serie, String^ anio_fa
 		MessageBox::Show(e->Message);
 	}
 }
+
+void DB::Eliminar(String^ id)
+{
+	String^ sql = "delete from registro_de_ventas where Id = '" + id + "' ";
+	MySqlCommand^ cursor = gcnew MySqlCommand(sql, this->conn); //hacemos el cursor
+	try
+	{
+		using namespace System::Windows::Forms;
+		using namespace System::Data;
+		using namespace System::Drawing;
+		cursor->ExecuteNonQuery();
+		using namespace System::Windows::Forms;
+		using namespace System::Data;
+		using namespace System::Drawing;
+		MessageBox::Show("Eliminacion completada correctamente!");
+	}
+	catch (Exception^ e) //si hay un error se muestra un mensaje en pantalla
+	{
+		using namespace System::Windows::Forms;
+		using namespace System::Data;
+		using namespace System::Drawing;
+		MessageBox::Show(e->Message);
+	}
+}
