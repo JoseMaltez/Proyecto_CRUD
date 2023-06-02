@@ -35,8 +35,8 @@ namespace CppCLRWinFormsProject {
 				delete components;
 			}
 		}
-	private: String^ connectionString = "datasource=localhost; username=root; password=localhost; database=proyectocrud;";
-	private: MySqlConnection^ conn = gcnew MySqlConnection(connectionString);
+	private: String^ connectionString = "datasource=localhost; username=root; password=localhost; database=proyectocrud;"; //colocamos parametros para conectar base de datos
+	private: MySqlConnection^ conn = gcnew MySqlConnection(connectionString); //creando la conexion con MySql
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::TextBox^ txt_nombre;
 	private: System::Windows::Forms::TextBox^ txt_contra;
@@ -142,28 +142,28 @@ private: System::Void textBox1_TextChanged(System::Object^ sender, System::Event
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ sql = "select * from login where Usuario= '" + txt_nombre->Text + "' and Contra = '" + txt_contra->Text + "'";
-	MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn);
-	MySqlDataReader^ dataReader;
+	String^ sql = "select * from login where Usuario= '" + txt_nombre->Text + "' and Contra = '" + txt_contra->Text + "'"; //seleccionamos todo de la tabla login y asignamos las textbox para tomar los datos
+	MySqlCommand^ cursor = gcnew MySqlCommand(sql, conn); //hacemos el cursor
+	MySqlDataReader^ dataReader; //funcion que leerá la información
 
 	try {
-		this->conn->Open();
-		dataReader = cursor->ExecuteReader();
-		if (dataReader->Read())
+		this->conn->Open(); //abrimos la conexion
+		dataReader = cursor->ExecuteReader(); //comprobamos que la conexion este ejecutandose
+		if (dataReader->Read()) //si los datos coinciden
 		{
-			MessageBox::Show(L"Bienvenido " + txt_nombre->Text);
-			Proyecto_CRUD::MenuCRUD^ menucrud = gcnew Proyecto_CRUD::MenuCRUD();
+			MessageBox::Show(L"Bienvenido " + txt_nombre->Text); //mensaje de bienvenida al menu
+			Proyecto_CRUD::MenuCRUD^ menucrud = gcnew Proyecto_CRUD::MenuCRUD(); //llamamos al siguiente form
 			this->Visible = false;
 			menucrud->ShowDialog();
-			this->Visible = true;
+			this->Visible = true; //mostramos el menu
 		}
-		else
+		else //si los datos no coinciden
 		{
 			MessageBox::Show(L"Usuario incorrecto");
-			this->conn->Close();
+			this->conn->Close();//cerramos la conexion en caso de error
 		}
 	}
-	catch(Exception^x){
+	catch(Exception^x){ //capturamos cualquier error y lo mostramos como mensaje
 		MessageBox::Show(x->Message);
 
 	}
