@@ -78,8 +78,7 @@ namespace CppCLRWinFormsProject {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->button1->ForeColor = System::Drawing::Color::White;
 			this->button1->Location = System::Drawing::Point(151, 313);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(160, 36);
@@ -95,8 +94,7 @@ namespace CppCLRWinFormsProject {
 			this->txt_nombre->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txt_nombre->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txt_nombre->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_nombre->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_nombre->Location = System::Drawing::Point(140, 126);
 			this->txt_nombre->Multiline = true;
 			this->txt_nombre->Name = L"txt_nombre";
@@ -112,8 +110,7 @@ namespace CppCLRWinFormsProject {
 			this->txt_contra->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txt_contra->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txt_contra->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_contra->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_contra->Location = System::Drawing::Point(140, 204);
 			this->txt_contra->Multiline = true;
 			this->txt_contra->Name = L"txt_contra";

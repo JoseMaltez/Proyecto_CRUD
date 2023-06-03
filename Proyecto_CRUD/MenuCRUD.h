@@ -166,11 +166,11 @@ namespace Proyecto_CRUD {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Century Schoolbook", 27.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::Transparent;
-			this->label1->Location = System::Drawing::Point(360, 9);
+			this->label1->Location = System::Drawing::Point(327, 8);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(347, 43);
+			this->label1->Size = System::Drawing::Size(383, 43);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"Vehiculos Maeda";
+			this->label1->Text = L"Vehiculos Tunchez";
 			this->label1->Click += gcnew System::EventHandler(this, &MenuCRUD::label1_Click);
 			// 
 			// tabControl1
@@ -229,12 +229,13 @@ namespace Proyecto_CRUD {
 			this->data_grid->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->data_grid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::Color::MidnightBlue;
+			dataGridViewCellStyle2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			dataGridViewCellStyle2->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::Color::DeepSkyBlue;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::Desktop;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::Color::Teal;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::Color::White;
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->data_grid->DefaultCellStyle = dataGridViewCellStyle2;
 			this->data_grid->Location = System::Drawing::Point(31, 29);
@@ -288,8 +289,7 @@ namespace Proyecto_CRUD {
 			this->txt_placa->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_placa->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txt_placa->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_placa->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_placa->Location = System::Drawing::Point(733, 327);
 			this->txt_placa->Name = L"txt_placa";
 			this->txt_placa->Size = System::Drawing::Size(234, 27);
@@ -300,8 +300,7 @@ namespace Proyecto_CRUD {
 			this->txt_anio->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_anio->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txt_anio->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_anio->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_anio->Location = System::Drawing::Point(733, 260);
 			this->txt_anio->Name = L"txt_anio";
 			this->txt_anio->Size = System::Drawing::Size(234, 27);
@@ -342,8 +341,7 @@ namespace Proyecto_CRUD {
 			this->txt_serie->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_serie->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txt_serie->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_serie->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_serie->Location = System::Drawing::Point(733, 196);
 			this->txt_serie->Name = L"txt_serie";
 			this->txt_serie->Size = System::Drawing::Size(234, 27);
@@ -355,8 +353,7 @@ namespace Proyecto_CRUD {
 			this->txt_marca->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_marca->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txt_marca->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_marca->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_marca->Location = System::Drawing::Point(733, 130);
 			this->txt_marca->Name = L"txt_marca";
 			this->txt_marca->Size = System::Drawing::Size(234, 27);
@@ -367,8 +364,7 @@ namespace Proyecto_CRUD {
 			this->txt_nombre->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_nombre->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txt_nombre->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_nombre->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_nombre->Location = System::Drawing::Point(733, 71);
 			this->txt_nombre->Name = L"txt_nombre";
 			this->txt_nombre->Size = System::Drawing::Size(234, 27);
@@ -417,8 +413,7 @@ namespace Proyecto_CRUD {
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_id_mod->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txt_id_mod->Enabled = false;
-			this->txt_id_mod->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_id_mod->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_id_mod->Location = System::Drawing::Point(734, 52);
 			this->txt_id_mod->Name = L"txt_id_mod";
 			this->txt_id_mod->Size = System::Drawing::Size(234, 27);
@@ -496,8 +491,7 @@ namespace Proyecto_CRUD {
 			this->txt_placa_mod->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_placa_mod->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txt_placa_mod->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_placa_mod->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_placa_mod->Location = System::Drawing::Point(734, 365);
 			this->txt_placa_mod->Name = L"txt_placa_mod";
 			this->txt_placa_mod->Size = System::Drawing::Size(234, 27);
@@ -508,8 +502,7 @@ namespace Proyecto_CRUD {
 			this->txt_anio_mod->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_anio_mod->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txt_anio_mod->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_anio_mod->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_anio_mod->Location = System::Drawing::Point(734, 302);
 			this->txt_anio_mod->Name = L"txt_anio_mod";
 			this->txt_anio_mod->Size = System::Drawing::Size(234, 27);
@@ -520,8 +513,7 @@ namespace Proyecto_CRUD {
 			this->txt_serie_mod->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_serie_mod->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txt_serie_mod->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_serie_mod->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_serie_mod->Location = System::Drawing::Point(734, 237);
 			this->txt_serie_mod->Name = L"txt_serie_mod";
 			this->txt_serie_mod->Size = System::Drawing::Size(234, 27);
@@ -533,8 +525,7 @@ namespace Proyecto_CRUD {
 			this->txt_marca_mod->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_marca_mod->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txt_marca_mod->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_marca_mod->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_marca_mod->Location = System::Drawing::Point(734, 173);
 			this->txt_marca_mod->Name = L"txt_marca_mod";
 			this->txt_marca_mod->Size = System::Drawing::Size(234, 27);
@@ -545,8 +536,7 @@ namespace Proyecto_CRUD {
 			this->txt_nombre_mod->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_nombre_mod->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->txt_nombre_mod->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_nombre_mod->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_nombre_mod->Location = System::Drawing::Point(734, 113);
 			this->txt_nombre_mod->Name = L"txt_nombre_mod";
 			this->txt_nombre_mod->Size = System::Drawing::Size(234, 27);
@@ -568,12 +558,13 @@ namespace Proyecto_CRUD {
 			this->data_grid2->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this->data_grid2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle4->BackColor = System::Drawing::Color::MidnightBlue;
+			dataGridViewCellStyle4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			dataGridViewCellStyle4->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::Color::DeepSkyBlue;
-			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::Desktop;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::Color::Teal;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::Color::White;
 			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->data_grid2->DefaultCellStyle = dataGridViewCellStyle4;
 			this->data_grid2->Location = System::Drawing::Point(31, 29);
@@ -630,8 +621,7 @@ namespace Proyecto_CRUD {
 				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			this->txt_id_el->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->txt_id_el->Enabled = false;
-			this->txt_id_el->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(78)),
-				static_cast<System::Int32>(static_cast<System::Byte>(95)));
+			this->txt_id_el->ForeColor = System::Drawing::Color::PaleTurquoise;
 			this->txt_id_el->Location = System::Drawing::Point(730, 202);
 			this->txt_id_el->Name = L"txt_id_el";
 			this->txt_id_el->Size = System::Drawing::Size(43, 27);
@@ -669,12 +659,13 @@ namespace Proyecto_CRUD {
 			this->data_grid3->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
 			this->data_grid3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle6->BackColor = System::Drawing::Color::MidnightBlue;
+			dataGridViewCellStyle6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(4)), static_cast<System::Int32>(static_cast<System::Byte>(13)),
+				static_cast<System::Int32>(static_cast<System::Byte>(23)));
 			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			dataGridViewCellStyle6->ForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::Color::DeepSkyBlue;
-			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::Desktop;
+			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::Color::Teal;
+			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::Color::White;
 			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->data_grid3->DefaultCellStyle = dataGridViewCellStyle6;
 			this->data_grid3->Location = System::Drawing::Point(31, 29);
