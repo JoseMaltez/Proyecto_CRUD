@@ -219,7 +219,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		}
 		else //si los datos no coinciden
 		{
-			MessageBox::Show(L"Usuario incorrecto");
+			MessageBox::Show(L"Informacion vacia, debe llenarlo");
 			this->conn->Close();//cerramos la conexion en caso de error
 		}
 	}
