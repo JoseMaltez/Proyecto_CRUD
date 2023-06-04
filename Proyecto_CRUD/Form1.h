@@ -170,7 +170,7 @@ namespace CppCLRWinFormsProject {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(264, 64);
 			this->label3->TabIndex = 6;
-			this->label3->Text = L"Iniciar Sesión en \r\nBase de datos";
+			this->label3->Text = L"Iniciar Sesión en \rVehiculos Rojas";
 			this->label3->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// Form1
@@ -219,7 +219,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		}
 		else //si los datos no coinciden
 		{
-			MessageBox::Show(L"Informacion vacia, debe llenarlo");
+			MessageBox::Show(L"Usuario incorrecto");
 			this->conn->Close();//cerramos la conexion en caso de error
 		}
 	}
